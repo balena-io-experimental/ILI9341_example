@@ -1,0 +1,12 @@
+version: '2'
+services:
+  fbcp-ili9341:
+    privileged: true
+    restart: always
+    build: ./fbcp-ili9341
+#  resin-wpe:
+#    privileged: true
+#    build: ./resin-wpe
+#    restart: always
+#    depends_on:
+#      - fbcp-ili9341
