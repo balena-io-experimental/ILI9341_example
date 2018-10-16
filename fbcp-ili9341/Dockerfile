@@ -28,6 +28,7 @@ RUN cmake \
 RUN make -j
 
 FROM resin/rpi-raspbian
+COPY --from=build /usr/lib/arm-linux* /usr/lib/
 COPY --from=build /opt/vc/lib/* /opt/vc/lib/
 COPY --from=build /usr/src/fbcp-ili9341/build/fbcp-ili9341 /usr/bin/
 
